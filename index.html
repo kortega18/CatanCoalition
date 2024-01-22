@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Catan Coalition</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Catan Coalition Stats</h1>
+
+        <div class="buttonHolder">        
+            <button id="totalWins" class="selection" onclick="totalWins_button()" disabled="true">Hide Total Wins</button>
+            <button id="inPerson" class="selection" onclick="inPerson_button()">Show In Person Wins</button>
+            <button id="online" class="selection" onclick="online_button()">Show Online Wins</button>
+            <button id="gamesPlayed" class="selection" onclick="gamesPlayed_button()">Show Games Played</button>
+            <button id="winRate" class="selection" onclick="winRate_button()">Show Win Rate</button>
+        </div>
+
+        <div class="tableHolder">
+            <table id="table" class="table table-dark table-bordered"></table>
+        </div>
+        <script src="playerInfo.js"></script>
+    </body>
+</html>

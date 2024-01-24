@@ -4,8 +4,16 @@ body {
     text-align: center;
 }
 
-h1, h2, h3, h4 {
+h1{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h3 {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h4 {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 button {

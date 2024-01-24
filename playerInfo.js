@@ -41,7 +41,7 @@ const playerInfo = [
         winTotal: 0,
         inPerson: 0,
         online: 0,
-        gamesPlayed: 2,
+        gamesPlayed: 3,
         winRate: "0%",
         january: 0
     },
@@ -59,8 +59,8 @@ const playerInfo = [
         winTotal: 1,
         inPerson: 1,
         online: 0,
-        gamesPlayed: 13,
-        winRate: "8%",
+        gamesPlayed: 14,
+        winRate: "7%",
         january: 1
     },
     {
@@ -77,8 +77,8 @@ const playerInfo = [
         winTotal: 1,
         inPerson: 0,
         online: 1,
-        gamesPlayed: 1,
-        winRate: "100%",
+        gamesPlayed: 2,
+        winRate: "50%",
         january: 1
     },
     {
@@ -92,11 +92,11 @@ const playerInfo = [
     },
     {
         name: "Tony",
-        winTotal: 3,
+        winTotal: 4,
         inPerson: 1,
-        online: 2,
-        gamesPlayed: 13,
-        winRate: "23%",
+        online: 3,
+        gamesPlayed: 14,
+        winRate: "29%",
         january: 2
     },
     {

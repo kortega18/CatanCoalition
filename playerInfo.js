@@ -37,6 +37,15 @@ const playerInfo = [
         january: 0
     },
     {
+        name: "Daniel",
+        winTotal: 0,
+        inPerson: 0,
+        online: 0,
+        gamesPlayed: 1,
+        winRate: "0%",
+        january: 0
+    },
+    {
         name: "Dorian",
         winTotal: 2,
         inPerson: 2,
@@ -83,11 +92,11 @@ const playerInfo = [
     },
     {
         name: "Tony",
-        winTotal: 2,
+        winTotal: 3,
         inPerson: 1,
-        online: 1,
-        gamesPlayed: 11,
-        winRate: "18%",
+        online: 2,
+        gamesPlayed: 12,
+        winRate: "25%",
         january: 2
     },
     {

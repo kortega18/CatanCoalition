@@ -11,10 +11,10 @@ const headerInfo = [
 const playerInfo = [
     {
         name: "Almasa",
-        winTotal: 1,
+        winTotal: 2,
         inPerson: 1,
-        online: 0,
-        gamesPlayed: 1,
+        online: 1,
+        gamesPlayed: 2,
         winRate: "100%",
         january: 1
     },
@@ -41,26 +41,26 @@ const playerInfo = [
         winTotal: 0,
         inPerson: 0,
         online: 0,
-        gamesPlayed: 1,
+        gamesPlayed: 2,
         winRate: "0%",
         january: 0
     },
     {
         name: "Dorian",
-        winTotal: 2,
-        inPerson: 2,
+        winTotal: 2.5,
+        inPerson: 2.5,
         online: 0,
-        gamesPlayed: 2,
+        gamesPlayed: 2.5,
         winRate: "100%",
-        january: 2
+        january: 2.5
     },
     {
         name: "Kassie",
         winTotal: 1,
         inPerson: 1,
         online: 0,
-        gamesPlayed: 11,
-        winRate: "9%",
+        gamesPlayed: 13,
+        winRate: "8%",
         january: 1
     },
     {
@@ -83,8 +83,8 @@ const playerInfo = [
     },
     {
         name: "Pedro",
-        winTotal: 2,
-        inPerson: 2,
+        winTotal: 1.5,
+        inPerson: 1.5,
         online: 0,
         gamesPlayed: 3,
         winRate: "67%",
@@ -95,8 +95,8 @@ const playerInfo = [
         winTotal: 3,
         inPerson: 1,
         online: 2,
-        gamesPlayed: 12,
-        winRate: "25%",
+        gamesPlayed: 13,
+        winRate: "23%",
         january: 2
     },
     {

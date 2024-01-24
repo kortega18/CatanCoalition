@@ -129,6 +129,7 @@ const playerInfo = [
 ];
 
 let table = document.querySelector("table");
+let leaderBoard = document.getElementById("leaders");
 
 var tableHeadersList = [    
     "Name", 
@@ -148,6 +149,8 @@ var tableDataList = [
     // "winRate",
     // "january"
 ];
+
+var leadersList = [];
 
 function totalWins_button() {
     var tw_Btn = document.getElementById("totalWins");
@@ -303,3 +306,33 @@ function removeRows(table)
 function findWinRate(timesPlayed, timesWon) {
     return ((timesWon/timesPlayed) * 100);
 }
+
+function findLeaders(leaderBoard, players) {
+    var leadersName = [];
+    var leadersScore = [];
+    for (let element of players) {
+        for (key in element) {
+            if (key === "name") {
+                leadersName.push(element[key]);
+            }
+            if (key === "winTotal") {
+                leadersScore.push(element[key]);
+            }
+        }
+    }
+
+    var highestScore = 0;
+
+    for (var i = 0; i < leadersScore.length; i++) {
+        if(leadersScore[i] > highestScore) {
+            highestScore = leadersScore[i];
+        }
+    }
+
+    var scoreLocation = leadersScore.indexOf(highestScore);
+    var currentWinner = leadersName[scoreLocation];
+
+    leaderBoard.innerHTML = currentWinner;
+}
+
+findLeaders(leaderBoard, playerInfo);

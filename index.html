@@ -2,28 +2,424 @@
 <html>
     <head>
         <title>Catan Coalition</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/icon.css">
+	    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
-    <body>
-        <h1>Catan Coalition Stats</h1>
-
-        <div class="buttonHolder">        
-            <button id="totalWins" class="selection" onclick="totalWins_button()" disabled="true">Hide Total Wins</button>
-            <button id="inPerson" class="selection" onclick="inPerson_button()">Show In Person Wins</button>
-            <button id="online" class="selection" onclick="online_button()">Show Online Wins</button>
-            <button id="gamesPlayed" class="selection" onclick="gamesPlayed_button()">Show Games Played</button>
-            <button id="winRate" class="selection" onclick="winRate_button()">Show Win Rate</button>
+    <body class="bg-grey">
+        <div class="side-bar card">
+            <div class="site-name-wrapper">
+                <span class="site-name">
+                    <span class="icon icon-three-circles fn-green"></span>
+                    Dashboard	
+                </span>
+            </div>
+            <div class="side-menu">
+                <ul>
+                    <li>
+                        <button id="home-button" onclick="homePage()">
+                            <span class="icon icon-home fn-red"></span>
+                            Home
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Almasa')">
+                            <span class="icon icon-user fn-orange"></span>
+                            Almasa
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Amanda')">
+                            <span class="icon icon-user fn-yellow"></span>
+                            Amanda
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Bre')">
+                            <span class="icon icon-user fn-green"></span>
+                            Bre
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Bret')">
+                            <span class="icon icon-user fn-mint"></span>
+                            Bret
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Chris')">
+                            <span class="icon icon-user fn-blue"></span>
+                            Chris
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Daniel')">
+                            <span class="icon icon-user fn-purple"></span>
+                            Daniel
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Dorian')">
+                            <span class="icon icon-user fn-gray"></span>
+                            Dorian
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Edisson')">
+                            <span class="icon icon-user fn-red"></span>
+                            Edisson
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Henry')">
+                            <span class="icon icon-user fn-orange"></span>
+                            Henry
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Joel')">
+                            <span class="icon icon-user fn-yellow"></span>
+                            Joel
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Kassie')">
+                            <span class="icon icon-user fn-green"></span>
+                            Kassie
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Lukas')">
+                            <span class="icon icon-user fn-mint"></span>
+                            Lukas
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Nathan')">
+                            <span class="icon icon-user fn-blue"></span>
+                            Nathan
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Pedro')">
+                            <span class="icon icon-user fn-purple"></span>
+                            Pedro
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Ryan')">
+                            <span class="icon icon-user fn-gray"></span>
+                            Ryan
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Tony')">
+                            <span class="icon icon-user fn-red"></span>
+                            Tony
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Tristan')">
+                            <span class="icon icon-user fn-orange"></span>
+                            Tristan
+                        </butotn>
+                    </li>
+                    <li>
+                        <button onclick="findPage('Yessenia')">
+                            <span class="icon icon-user fn-yellow"></span>
+                            Yessenia
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div>
-            <h3>Currently in the lead:</h3>
-            <h4 id="leaders"></h4>
+        <div id="show-overall-stats" class="content-wrapper">
+            <div class="container-fluid">
+                <h1 class="fn-purple bold"> Overall Stats</h1>
+                <div class="row mg-tp-10">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">First Place</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="first-place" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Second Place</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="second-place" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Most Victory Points</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="mvp" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Can't Keep Largest Army's</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="ckla" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Most Largest Army's Acquired</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="mlaa" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Can't Keep Longest Roads</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="cklr" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Most Longest Road's Acquired</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="mlra" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">January Winner</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="jw" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">February Winner</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="fw" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Can't Win A Game</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="cwag" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Most Games Played</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="mgp" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="tableHolder">
-            <table id="table" class="table table-dark table-bordered"></table>
+    
+        <div id="show-individual-stats" class="content-wrapper">
+            <div class="header container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-4 xs-mg-tp-10">
+                        <span class="icon icon-user user-avatar"></span>
+                        <span class="pd-lt-10 d-block left">
+                            <span id="user-name" class="user-name"></span>
+                            <span id="location" class="location"></span>
+                        </span>
+                    </div>
+                    <!-- <div class="col-xs-12 col-lg-4 xs-mg-tp-10">
+                        <div class="search-wrapper">
+                            <input class="nav-search" type="text" placeholder="this don't work yet">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-4 xs-mg-tp-10">
+                        <span class="icon icon-message fn-purple notifications"></span>
+                    </div> -->
+                </div>
+            </div>
+            <div class="container-fluid">
+                <h1 class="fn-purple bold"> Overall Stats</h1>
+                <div class="row mg-tp-10">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Total Games Played</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="tgp" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Total Games Won</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="tgw" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Overall Win Rate</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="owr" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Victory Points Gained</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="vpg" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Longest Road's Attained</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="lra" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Longest Road's Lost</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="lrl" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Largest Army's Attained</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="laa" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="over-all-stats card card-blended">
+                            <div class="stats-head">
+                                <span class="fn-purple fn-13 bold">Largest Army's Lost</span>
+                            </div>
+                            <div class="stats-body">
+                                <div id="lal" class="over-all">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mg-tp-15 mg-bt-15">
+                    <div class="col-xs-12">
+                        <div class="revenue-stats mg-bt-15 card-blended grd-purple">
+                            <div class="revenue-stats-body">
+                                <span class="heading">OverAll Stats</span>
+                                <span id="amount_all" class="amount"></span>
+                                <span id="month_all" class="month"></span>
+                                <span id="percentage_all" class="percentage"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="fn-purple bold"> Monthly Stats</h1>
+                <div class="row mg-tp-15 mg-bt-15">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="revenue-stats mg-bt-15 card-blended grd-purple">
+                            <div class="revenue-stats-body">
+                                <span class="heading">January Stats</span>
+                                <span id="amount_jan" class="amount"></span>
+                                <span id="month_jan" class="month"></span>
+                                <span id="percentage_jan" class="percentage"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="revenue-stats mg-bt-15 card-blended grd-purple">
+                            <div class="revenue-stats-body">
+                                <span class="heading">Feburary Stats</span>
+                                <span id="amount_feb"class="amount"></span>
+                                <span id="month_feb" class="month"></span>
+                                <span id="percentage_feb"class="percentage"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="playerInfo.js"></script>
     </body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script type="text/javascript" src="js/playerInfo.js"></script>
 </html>

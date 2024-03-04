@@ -38,6 +38,10 @@ let amount_feb_span = document.getElementById("amount_feb");
 let month_feb_span = document.getElementById("month_feb");
 let percentage_feb_span = document.getElementById("percentage_feb");
 
+let amount_mar_span = document.getElementById("amount_mar");
+let month_mar_span = document.getElementById("month_mar");
+let percentage_mar_span = document.getElementById("percentage_mar");
+
 const playerInfo = [
     {
         name: "Almasa",
@@ -54,6 +58,10 @@ const playerInfo = [
         february: 0,
         gamesPlayed_Feb: 0,
         winRate_Feb: 0,
+
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
@@ -77,6 +85,10 @@ const playerInfo = [
         gamesPlayed_Feb: 0,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
@@ -98,6 +110,10 @@ const playerInfo = [
         february: 0,
         gamesPlayed_Feb: 0,
         winRate_Feb: 0,
+
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
@@ -121,6 +137,10 @@ const playerInfo = [
         gamesPlayed_Feb: 0,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
@@ -142,9 +162,13 @@ const playerInfo = [
         gamesPlayed_Feb: 3,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 1,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 1,
-        endedWith_LargestArmy: 2,
+        endedWith_LargestArmy: 3,
         lost_LargestArmy: 0,
         accumulated_VictoryPoints: 0,
     },
@@ -163,6 +187,10 @@ const playerInfo = [
         february: 0,
         gamesPlayed_Feb: 0,
         winRate_Feb: 0,
+
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
@@ -186,6 +214,10 @@ const playerInfo = [
         gamesPlayed_Feb: 1,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
@@ -208,7 +240,11 @@ const playerInfo = [
         gamesPlayed_Feb: 3,
         winRate_Feb: 0,
 
-        endedWith_LongestRoad: 0,
+        march: 0,
+        gamesPlayed_Mar: 1,
+        winRate_Mar: 0,
+
+        endedWith_LongestRoad: 1,
         lost_LongestRoad: 1,
         endedWith_LargestArmy: 0,
         lost_LargestArmy: 0,
@@ -228,6 +264,10 @@ const playerInfo = [
         february: 0,
         gamesPlayed_Feb: 2,
         winRate_Feb: 0,
+
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
@@ -251,11 +291,15 @@ const playerInfo = [
         gamesPlayed_Feb: 1,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 1,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
         lost_LargestArmy: 0,
-        accumulated_VictoryPoints: 0,
+        accumulated_VictoryPoints: 1,
     },
     {
         name: "Kassie",
@@ -273,11 +317,41 @@ const playerInfo = [
         gamesPlayed_Feb: 7,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 1,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 3,
-        lost_LongestRoad: 3,
+        lost_LongestRoad: 4,
         endedWith_LargestArmy: 1,
         lost_LargestArmy: 0,
         accumulated_VictoryPoints: 4,
+    },
+    {
+        name: "Lily",
+        location: "",
+
+        winTotal: 0,
+        gamesPlayed: 0,
+        winRate: 0,
+
+        january: 0,
+        gamesPlayed_Jan: 0,
+        winRate_Jan: 0,
+
+        february: 0,
+        gamesPlayed_Feb: 0,
+        winRate_Feb: 0,
+
+        march: 1,
+        gamesPlayed_Mar: 1,
+        winRate_Mar: 0,
+
+        endedWith_LongestRoad: 0,
+        lost_LongestRoad: 0,
+        endedWith_LargestArmy: 0,
+        lost_LargestArmy: 0,
+        accumulated_VictoryPoints: 1,
     },
     {
         name: "Lukas",
@@ -294,6 +368,10 @@ const playerInfo = [
         february: 0,
         gamesPlayed_Feb: 0,
         winRate_Feb: 0,
+
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
@@ -317,6 +395,10 @@ const playerInfo = [
         gamesPlayed_Feb: 1,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
@@ -338,6 +420,10 @@ const playerInfo = [
         february: 1,
         gamesPlayed_Feb: 4,
         winRate_Feb: 0,
+
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
@@ -361,6 +447,10 @@ const playerInfo = [
         gamesPlayed_Feb: 2,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
@@ -382,6 +472,10 @@ const playerInfo = [
         february: 2,
         gamesPlayed_Feb: 7,
         winRate_Feb: 0,
+
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
 
         endedWith_LongestRoad: 3,
         lost_LongestRoad: 1,
@@ -405,6 +499,10 @@ const playerInfo = [
         gamesPlayed_Feb: 0,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
@@ -427,23 +525,53 @@ const playerInfo = [
         gamesPlayed_Feb: 1,
         winRate_Feb: 0,
 
+        march: 0,
+        gamesPlayed_Mar: 0,
+        winRate_Mar: 0,
+
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
         lost_LargestArmy: 0,
         accumulated_VictoryPoints: 0,
     },
+    {
+        name: "Yuri",
+        location: "",
+
+        winTotal: 0,
+        gamesPlayed: 0,
+        winRate: 0,
+
+        january: 0,
+        gamesPlayed_Jan: 0,
+        winRate_Jan: 0,
+
+        february: 0,
+        gamesPlayed_Feb: 0,
+        winRate_Feb: 0,
+
+        march: 0,
+        gamesPlayed_Mar: 1,
+        winRate_Mar: 0,
+
+        endedWith_LongestRoad: 0,
+        lost_LongestRoad: 0,
+        endedWith_LargestArmy: 0,
+        lost_LargestArmy: 0,
+        accumulated_VictoryPoints: 2,
+    },
 ];
 
 function findWinTotal(playerInfo) {
     for (let element of playerInfo) {
-        element.winTotal = element.january + element.february;
+        element.winTotal = element.january + element.february + element.march;
     }
 }
 
 function findTotalGamesPlayed(playerInfo) {
     for (let element of playerInfo) {
-        element.gamesPlayed = element.gamesPlayed_Jan + element.gamesPlayed_Feb;
+        element.gamesPlayed = element.gamesPlayed_Jan + element.gamesPlayed_Feb + element.gamesPlayed_Mar;
     }
 }
 
@@ -467,6 +595,13 @@ function findWinRatePerMonth(playerInfo) {
         }
         else{
             element.winRate_Feb = ((element.february / element.gamesPlayed_Feb) * 100).toFixed(0) + "%";
+        }
+
+        if(element.gamesPlayed_Mar == 0){
+            element.winRate_Mar = "0%";
+        }
+        else{
+            element.winRate_Mar = ((element.march / element.gamesPlayed_Mar) * 100).toFixed(0) + "%";
         }
     }
 }
@@ -721,6 +856,10 @@ function findPage(name) {
     amount_feb_span.textContent = item.february + " won";
     month_feb_span.textContent = item.gamesPlayed_Feb + " played";
     percentage_feb_span.textContent = item.winRate_Feb;
+
+    amount_mar_span.textContent = item.march + " won";
+    month_mar_span.textContent = item.gamesPlayed_Mar + " played";
+    percentage_mar_span.textContent = item.winRate_Mar;
 }
 
 function homePage() {

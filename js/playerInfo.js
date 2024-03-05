@@ -14,6 +14,7 @@ let cklr = document.getElementById("cklr");
 let mlra = document.getElementById("mlra");
 let jw = document.getElementById("jw");
 let fw = document.getElementById("fw");
+let mw = document.getElementById("mw");
 let cwag = document.getElementById("cwag");
 let mgp = document.getElementById("mgp");
 
@@ -775,6 +776,23 @@ function findFebruaryWinner() {
     }
 }
 
+var marWinner = [];
+function findMarchWinner() {
+    var marWinnerScore = 0;
+
+    for(let element of playerInfo){
+        if(element.march > marWinnerScore) {
+            marWinnerScore = element.march;
+        }
+    }
+
+    for(let element of playerInfo){
+        if(element.march == marWinnerScore) {
+            marWinner.push(element.name);
+        }
+    }
+}
+
 var loser = [];
 function findLosers() {
     var losersScore = 10;
@@ -872,6 +890,7 @@ function homePage() {
     mlra.innerHTML = "";
     jw.innerHTML = "";
     fw.innerHTML = "";
+    mw.innerHTML = "";
     cwag.innerHTML = "";
     mgp.innerHTML = "";
     
@@ -884,6 +903,7 @@ function homePage() {
     mlra.innerHTML += personWithMostLongestRoads;
     jw.innerHTML += janWinner;
     fw.innerHTML += febWinner;
+    mw.innerHTML += marWinner;
     cwag.innerHTML += loser;
     mgp.innerHTML += mostGames;
 
@@ -918,6 +938,7 @@ lostLongestRoad();
 longestRoad();
 findJanuaryWinner();
 findFebruaryWinner();
+findMarchWinner();
 findLosers();
 findMostGamesPlayedByPlayer();
 

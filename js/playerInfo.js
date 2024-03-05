@@ -673,7 +673,7 @@ function lostLargestArmy() {
             personWithMostLargestArmysLost.push(element.name);
         }
     }
-    if(personWithMostLargestArmysLost.length == 18){
+    if(personWithMostLargestArmysLost.length == playerInfo.length){
         personWithMostLargestArmysLost = [];
         personWithMostLargestArmysLost.push("No One Yet")
     }
@@ -694,7 +694,7 @@ function largestArmy() {
             personWithMostLargestArmys.push(element.name);
         }
     }
-    if(personWithMostLargestArmys.length == 18){
+    if(personWithMostLargestArmys.length == playerInfo.length){
         personWithMostLargestArmys = [];
         personWithMostLargestArmys.push("No One Yet")
     }
@@ -715,7 +715,7 @@ function lostLongestRoad() {
             personWithMostLongestRoadsLost.push(element.name);
         }
     }
-    if(personWithMostLongestRoadsLost.length == 18){
+    if(personWithMostLongestRoadsLost.length == playerInfo.length){
         personWithMostLongestRoadsLost = [];
         personWithMostLongestRoadsLost.push("No One Yet")
     }
@@ -736,7 +736,7 @@ function longestRoad() {
             personWithMostLongestRoads.push(element.name);
         }
     }
-    if(personWithMostLongestRoads.length == 18){
+    if(personWithMostLongestRoads.length == playerInfo.length){
         personWithMostLongestRoads = [];
         personWithMostLongestRoads.push("No One Yet")
     }

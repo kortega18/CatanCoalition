@@ -87,14 +87,14 @@ const playerInfo = [
         winRate_Feb: 0,
 
         march: 0,
-        gamesPlayed_Mar: 0,
+        gamesPlayed_Mar: 1,
         winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
         lost_LargestArmy: 0,
-        accumulated_VictoryPoints: 0,
+        accumulated_VictoryPoints: 2,
     },
     {
         name: "Bre",
@@ -164,14 +164,14 @@ const playerInfo = [
         winRate_Feb: 0,
 
         march: 0,
-        gamesPlayed_Mar: 1,
+        gamesPlayed_Mar: 2,
         winRate_Mar: 0,
 
-        endedWith_LongestRoad: 0,
+        endedWith_LongestRoad: 1,
         lost_LongestRoad: 1,
         endedWith_LargestArmy: 3,
         lost_LargestArmy: 0,
-        accumulated_VictoryPoints: 0,
+        accumulated_VictoryPoints: 1,
     },
     {
         name: "Daniel",
@@ -216,7 +216,7 @@ const playerInfo = [
         winRate_Feb: 0,
 
         march: 0,
-        gamesPlayed_Mar: 0,
+        gamesPlayed_Mar: 1,
         winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
@@ -319,14 +319,14 @@ const playerInfo = [
         winRate_Feb: 0,
 
         march: 0,
-        gamesPlayed_Mar: 1,
+        gamesPlayed_Mar: 2,
         winRate_Mar: 0,
 
         endedWith_LongestRoad: 3,
         lost_LongestRoad: 4,
         endedWith_LargestArmy: 1,
         lost_LargestArmy: 0,
-        accumulated_VictoryPoints: 4,
+        accumulated_VictoryPoints: 5,
     },
     {
         name: "Lily",
@@ -422,8 +422,8 @@ const playerInfo = [
         gamesPlayed_Feb: 4,
         winRate_Feb: 0,
 
-        march: 0,
-        gamesPlayed_Mar: 0,
+        march: 1,
+        gamesPlayed_Mar: 1,
         winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
@@ -475,11 +475,11 @@ const playerInfo = [
         winRate_Feb: 0,
 
         march: 0,
-        gamesPlayed_Mar: 0,
+        gamesPlayed_Mar: 1,
         winRate_Mar: 0,
 
         endedWith_LongestRoad: 3,
-        lost_LongestRoad: 1,
+        lost_LongestRoad: 2,
         endedWith_LargestArmy: 0,
         lost_LargestArmy: 0,
         accumulated_VictoryPoints: 3,

@@ -101,6 +101,10 @@ body, html {
 	margin-bottom: 20px;
 }
 
+.catan-bonus-cards {
+	height: 275px;
+}
+
 .card-blended {
 	border-radius: 8px;
 }
@@ -161,6 +165,11 @@ body, html {
 
 .over-all-stats{
 	min-height: 75px;
+	background-color: #fff;
+}
+
+.over-all-stats-bonuses{
+	min-height: 400px;
 	background-color: #fff;
 }
 
@@ -263,7 +272,11 @@ body, html {
 /* stats*/
 .stats-head {
 	padding: 5px 15px;
+}
 
+.stats-head-bonuses {
+	text-align: center;
+	padding-top: 10px;
 }
 
 .stats-body {
@@ -272,6 +285,11 @@ body, html {
 	width: 100%;
 	display: block;
 	overflow: auto;
+}
+
+.stats-body-bonuses {
+	width: 100%;
+	display: block;
 }
 
 .stat-row {
@@ -314,6 +332,17 @@ body, html {
 .over-all {
 	padding-left: 10px;
 	font-size: large;
+}
+
+.over-all-bonuses {
+	text-align: center;
+	font-size: large;
+}
+
+.over-all-bonuses-attained {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
 }
 
 .revenue-stats-body {
@@ -415,7 +444,7 @@ input:checked + .slider:before {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
 	.xs-mg-tp-10 {
 		margin-top: 20px;
 	}
@@ -469,3 +498,16 @@ button {
   ::-webkit-scrollbar-thumb:hover {
 	background: #f27df2; 
   }
+
+#myChart {
+	padding-left: 10px;
+	margin-bottom: 20px;
+}
+
+#mlra {
+	font-size: large;
+}
+
+#mlaa {
+	font-size: large;
+}

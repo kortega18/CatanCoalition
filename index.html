@@ -3,6 +3,7 @@
     <head>
         <title>Catan Coalition</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="icon" type="image/x-icon" href="/images/dice.png">
         <link rel="stylesheet" type="text/css" href="css/icon.css">
 	    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -151,7 +152,7 @@
             <div class="container-fluid">
                 <h1 class="fn-purple bold">Home</h1>
                 <div class="row mg-tp-10">
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">First Place</span>
@@ -162,7 +163,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">Second Place</span>
@@ -173,7 +174,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">Most Victory Points</span>
@@ -184,7 +185,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">Can't Keep Largest Army's</span>
@@ -195,18 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="over-all-stats card card-blended">
-                            <div class="stats-head">
-                                <span class="fn-purple fn-13 bold">Most Largest Army's</span>
-                            </div>
-                            <div class="stats-body">
-                                <div id="mlaa" class="over-all">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">Can't Keep Longest Roads</span>
@@ -217,18 +207,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="over-all-stats card card-blended">
-                            <div class="stats-head">
-                                <span class="fn-purple fn-13 bold">Most Longest Road's</span>
-                            </div>
-                            <div class="stats-body">
-                                <div id="mlra" class="over-all">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">January Winner</span>
@@ -239,7 +218,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">February Winner</span>
@@ -250,7 +229,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">March Winner</span>
@@ -261,7 +240,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">Can't Win A Game</span>
@@ -272,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="over-all-stats card card-blended">
                             <div class="stats-head">
                                 <span class="fn-purple fn-13 bold">Most Games Played</span>
@@ -283,11 +262,45 @@
                             </div>
                         </div>
                     </div>
+
+                    <canvas id="myChart" style="width:100%;"></canvas>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="over-all-stats-bonuses card card-blended">
+                            <div class="stats-head-bonuses">
+                                <span id="mlaa" class="fn-purple fn-13 bold">Most Largest Army's</span>
+                            </div>
+                            <div class="stats-body-bonuses">
+                                <div class="over-all-bonuses">
+                                    <div class="over-all-bonuses-attained">
+                                        Most Largest Army's attained.
+                                    </div>
+                                    <img class="catan-bonus-cards" src="images/LargestArmy.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="over-all-stats-bonuses card card-blended">
+                            <div class="stats-head-bonuses">
+                                <span id="mlra" class="fn-purple fn-13 bold">Most Longest Road's</span>
+                            </div>
+                            <div class="stats-body-bonuses">
+                                <div class="over-all-bonuses">
+                                    <div class="over-all-bonuses-attained">
+                                       Most Longest Road's attained.
+                                    </div>
+                                    <img class="catan-bonus-cards" src="images/LongestRoad.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
 
-    
         <div id="show-individual-stats" class="content-wrapper">
             <div class="header container-fluid">
                 <div class="row">
@@ -454,5 +467,6 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script type="text/javascript" src="js/playerInfo.js"></script>
 </html>

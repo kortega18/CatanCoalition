@@ -5,6 +5,10 @@ let show_individual_stats = document.getElementById("show-individual-stats");
 let user_name_span = document.getElementById("user-name");
 let location_span = document.getElementById("location");
 
+var barGraphValues = [];
+var xValues = [];
+var yValues = [];
+
 let first_place = document.getElementById("first-place");
 let second_place = document.getElementById("second-place");
 let mvp = document.getElementById("mvp");
@@ -673,6 +677,7 @@ function lostLargestArmy() {
             personWithMostLargestArmysLost.push(element.name);
         }
     }
+
     if(personWithMostLargestArmysLost.length == playerInfo.length){
         personWithMostLargestArmysLost = [];
         personWithMostLargestArmysLost.push("No One Yet")
@@ -694,6 +699,7 @@ function largestArmy() {
             personWithMostLargestArmys.push(element.name);
         }
     }
+
     if(personWithMostLargestArmys.length == playerInfo.length){
         personWithMostLargestArmys = [];
         personWithMostLargestArmys.push("No One Yet")
@@ -924,6 +930,78 @@ function showPlayerStat() {
     }
 }
 
+const barColors = [
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)",
+    "rgb(177, 124, 251)"
+];
+
+function getBarGraphValues() {
+    for (let element of playerInfo)
+    {
+        var individualValues = [element.winTotal, element.name];
+        barGraphValues.push(individualValues);
+    }
+
+    var sortedArray = barGraphValues.sort(function(a, b) {
+        if (a[0] == b[0]) {
+          return a[1] - b[1];
+        }
+        return b[0] - a[0];
+      }
+    );
+      
+    for(let i = 0; i < sortedArray.length; i++) {
+        xValues.push(sortedArray[i][1]);
+        yValues.push(sortedArray[i][0]);
+    }
+
+}
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    scales: {
+        xAxes: [{
+            gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            }
+        }]
+    },
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Scores"
+    }
+  }
+});
+
 findWinTotal(playerInfo);
 findTotalGamesPlayed(playerInfo);
 findWinRate(playerInfo);
@@ -941,5 +1019,6 @@ findFebruaryWinner();
 findMarchWinner();
 findLosers();
 findMostGamesPlayedByPlayer();
+getBarGraphValues();
 
 homePage();

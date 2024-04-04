@@ -65,12 +65,12 @@ const playerInfo = [
         winRate_Feb: 0,
 
         march: 1,
-        gamesPlayed_Mar: 2,
+        gamesPlayed_Mar: 5,
         winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
-        lost_LongestRoad: 0,
-        endedWith_LargestArmy: 0,
+        lost_LongestRoad: 1,
+        endedWith_LargestArmy: 1,
         lost_LargestArmy: 0,
         accumulated_VictoryPoints: 0,
     },
@@ -271,14 +271,14 @@ const playerInfo = [
         winRate_Feb: 0,
 
         march: 0,
-        gamesPlayed_Mar: 1,
+        gamesPlayed_Mar: 5,
         winRate_Mar: 0,
 
-        endedWith_LongestRoad: 0,
-        lost_LongestRoad: 0,
-        endedWith_LargestArmy: 1,
+        endedWith_LongestRoad: 1,
+        lost_LongestRoad: 3,
+        endedWith_LargestArmy: 2,
         lost_LargestArmy: 0,
-        accumulated_VictoryPoints: 5,
+        accumulated_VictoryPoints: 8,
     },
     {
         name: "Joel",
@@ -322,15 +322,15 @@ const playerInfo = [
         gamesPlayed_Feb: 7,
         winRate_Feb: 0,
 
-        march: 0,
-        gamesPlayed_Mar: 4,
+        march: 3,
+        gamesPlayed_Mar: 8,
         winRate_Mar: 0,
 
-        endedWith_LongestRoad: 3,
-        lost_LongestRoad: 5,
-        endedWith_LargestArmy: 2,
+        endedWith_LongestRoad: 6,
+        lost_LongestRoad: 7,
+        endedWith_LargestArmy: 3,
         lost_LargestArmy: 0,
-        accumulated_VictoryPoints: 8,
+        accumulated_VictoryPoints: 11,
     },
     {
         name: "Lily",
@@ -427,14 +427,14 @@ const playerInfo = [
         winRate_Feb: 0,
 
         march: 1,
-        gamesPlayed_Mar: 3,
+        gamesPlayed_Mar: 4,
         winRate_Mar: 0,
 
         endedWith_LongestRoad: 0,
         lost_LongestRoad: 0,
         endedWith_LargestArmy: 0,
         lost_LargestArmy: 0,
-        accumulated_VictoryPoints: 0,
+        accumulated_VictoryPoints: 1,
     },
     {
         name: "Ryan",
@@ -478,15 +478,15 @@ const playerInfo = [
         gamesPlayed_Feb: 7,
         winRate_Feb: 0,
 
-        march: 0,
-        gamesPlayed_Mar: 3,
+        march: 1,
+        gamesPlayed_Mar: 5,
         winRate_Mar: 0,
 
         endedWith_LongestRoad: 3,
-        lost_LongestRoad: 2,
+        lost_LongestRoad: 3,
         endedWith_LargestArmy: 0,
         lost_LargestArmy: 0,
-        accumulated_VictoryPoints: 4,
+        accumulated_VictoryPoints: 5,
     },
     {
         name: "Tristan",
